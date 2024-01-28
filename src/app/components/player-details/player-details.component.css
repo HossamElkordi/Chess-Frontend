@@ -1,0 +1,39 @@
+.noturn{
+    width: 530px;
+    height: 40px;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff20;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.turn{
+    width: 530px;
+    height: 40px;
+    display: flex;
+    margin-top: 2%;
+    border-width: 2px;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    align-items: center;
+    border-style: solid;
+    border-color: white;
+    justify-content: flex-start;
+    background-color: #ffffff20;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icn{
+    color: white;
+    margin-left: 2%;
+}
+
+.txt{
+    color: white;
+    margin-left: 2%;
+    font-size: medium;
+}

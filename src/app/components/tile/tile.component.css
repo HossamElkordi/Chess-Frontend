@@ -1,0 +1,33 @@
+.tile{
+    display: flex;
+    width: 56.25px;
+    height: 56.875px;
+}
+
+.inner-tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56.25px;
+    height: 56.875px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.inner-tile:hover{
+    background: radial-gradient(rgba(0, 0, 0, 0) 50%, #E1FF71 100%);
+}
+
+.selected-inner-tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56.25px;
+    height: 56.875px;
+    background: radial-gradient(rgba(0, 0, 0, 0) 30%, #8CE200 100%);
+}
+
+.chess-piece{
+    width: 60%;
+    height: 60%;
+}
+

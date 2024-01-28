@@ -1,0 +1,66 @@
+<mat-stepper class="steps" [linear]="isLinear" #stepper>
+    <mat-step>
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Select Play Mode</ng-template>
+
+            <div class='form-tab'>
+                <div class="radios">
+                    <label class="lbls" for="Single Player">
+                        <input type="radio" id="Single Player" formControlName="firstCtrl" value="Single Player">
+                        <span class="txt">Single Player</span>
+                    </label>
+                    
+                    <label class="lbls" for="Multi-Player">
+                        <input type="radio" id="Multi-Player" formControlName="firstCtrl" value="Multi-Player">
+                        <span class="txt">Multi-Player</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+
+    </mat-step>
+
+    <mat-step>
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill Players Name</ng-template>
+
+            <div class="form-tab">
+                <div class="name-field">
+                    <mat-label class="txt-name">White Player Name</mat-label>
+                    <mat-form-field>
+                        <input matInput formControlName="secondCtrl" placeholder="Name" required>
+                    </mat-form-field>
+                </div>
+
+                <div class="radios" *ngIf="firstFormGroup.controls['firstCtrl'].value == 'Single Player'">
+                    <label class="lbls" for="easy">
+                        <input type="radio" id="easy" formControlName="fourthCtrl" value="easy">
+                        <span class="txt">Easy</span>
+                    </label>
+                    
+                    <label class="lbls" for="medium">
+                        <input type="radio" id="medium" formControlName="fourthCtrl" value="medium">
+                        <span class="txt">Medium</span>
+                    </label>
+
+                    <label class="lbls" for="hard">
+                        <input type="radio" id="hard" formControlName="fourthCtrl" value="hard">
+                        <span class="txt">Hard</span>
+                    </label>
+                </div>
+    
+                <div class="name-field">
+                    <mat-label class="txt-name" *ngIf="firstFormGroup.controls['firstCtrl'].value == 'Multi-Player'">Black Player Name</mat-label>
+                    <mat-form-field *ngIf="firstFormGroup.controls['firstCtrl'].value == 'Multi-Player'">
+                        <input matInput formControlName="thirdCtrl" placeholder="Name" required>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="done-div">
+                <div class="btn" (click)="onBtnClick()">
+                    <span class="txt-btn">Play</span>
+                </div>
+            </div>
+        </form>
+    </mat-step>
+  </mat-stepper>

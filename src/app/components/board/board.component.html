@@ -1,0 +1,36 @@
+<div class="board-back" *ngIf="pieces">
+    <div class="board-back1">
+        <div class="board">
+            
+            <div class="lbl-row">
+                <app-lbl-tile *ngFor="let t of col_title"
+                    [width]="'56.25px'" [height]="'20px'" [text]="t">
+                </app-lbl-tile>
+            </div>
+
+            <div *ngFor="let row of board; index as i" class="row">
+
+                <app-lbl-tile 
+                    [width]="'20px'" [height]="'56.875px'" [text]="row_title[i]">
+                </app-lbl-tile>
+
+                <app-tile *ngFor="let cell of row; index as j" 
+                    [row]="i" [col]="j" [color]="getColor(i, j)" [name]="col_title[j]+row_title[i]"
+                    [piecePath]="paths[pieces[i][j]]" [canSelect]="mode == 'Multi-Player' || turn % 2 == 0" (cellIndex)="select($event)">
+                </app-tile>
+
+                <app-lbl-tile 
+                    [width]="'20px'" [height]="'56.875px'" [text]="row_title[i]">
+                </app-lbl-tile>
+
+            </div>
+
+            <div class="lbl-row">
+                <app-lbl-tile *ngFor="let t of col_title"
+                    [width]="'56.25px'" [height]="'20px'" [text]="t">
+                </app-lbl-tile>
+            </div>
+
+        </div>
+    </div>
+</div>

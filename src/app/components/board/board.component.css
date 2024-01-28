@@ -1,0 +1,35 @@
+.board-back{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 530px;
+    height: 535px;
+    background-color: #BC823E;
+}
+
+.board-back1{
+    display: flex;
+    width: 490px;
+    height: 495px;
+    background-color: #F6D2A0;
+}
+
+.board{
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 455px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lbl-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+}

@@ -1,0 +1,5 @@
+<div class="tile" [ngStyle]="{'background-color': color}" (click)="setSelected()">
+    <div [ngClass]="class">
+        <app-svg-icon *ngIf="piecePath !== ''" class="chess-piece" [path]="piecePath"></app-svg-icon>
+    </div>
+</div>

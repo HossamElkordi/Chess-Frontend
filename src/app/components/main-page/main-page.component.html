@@ -1,0 +1,8 @@
+<div class="page">
+    <div *ngIf="wname">
+        <app-player-details #black [isTurn]="turn == 1 ? 'turn' : 'noturn'" [icon]="bicon" [name]="bname" [color]="'b'"></app-player-details>
+        <app-board [mode]="mode" [diff]="diff" (piece_moved)="updateTurn($event)"></app-board>
+        <app-player-details #white [isTurn]="turn == 0 || turn == -1 ? 'turn' : 'noturn'" [icon]="wicon" [name]="wname" [color]="'w'"></app-player-details>
+    </div>
+</div>
+

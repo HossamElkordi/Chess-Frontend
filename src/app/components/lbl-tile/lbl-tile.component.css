@@ -1,0 +1,9 @@
+.lbl-tile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt{
+    margin: 0;
+}
